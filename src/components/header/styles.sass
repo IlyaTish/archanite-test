@@ -1,0 +1,176 @@
+.header
+  &__cont
+    display: flex
+    align-items: center
+    padding: 1.5rem 0
+
+.header-input
+  width: 100%
+  padding: 0
+  font-size: 1.125rem
+  color: #000000
+  font-weight: 550
+  text-overflow: ellipsis
+  border: none
+  border-radius: .313rem
+  box-sizing: border-box
+  outline: none
+  transition: .2s
+
+  &::placeholder
+    font-weight: 550
+
+  &:hover
+    background: lighten(#F5F5F5, 2%) !important
+
+  &:focus
+    background: #F5F5F5 !important
+
+.address-input
+  width: 100%
+  max-width: 28.125rem
+  display: flex
+  align-items: center
+  margin: 0 0 0 7.4vw
+  position: relative
+
+  &__icon-cont
+    width: 3.25rem
+    height: 100%
+    display: flex
+    align-items: center
+    justify-content: center
+    top: 0
+    left: 0
+    position: absolute
+    z-index: 9
+    box-sizing: border-box
+
+    &--close
+      width: 3rem
+      right: 0
+      left: unset
+      cursor: pointer
+      opacity: 0
+
+      &:before
+        width: 1px
+        height: calc(100% - .75rem)
+        content: ''
+        display: block
+        background: #C4C4C4
+        left: 0
+        position: absolute
+
+  &__txt
+    color: #000000
+    font-size: 18px
+    font-weight: 550
+
+  &__field-cont
+    width: 100%
+
+  &__field
+    width: 100%
+    padding: .625rem 3.125rem .625rem 3.125rem
+
+  &__field.focused
+    color: #979797
+    background: #F5F5F5
+
+.address-input.focused
+  .address-input__icon-cont--close
+    opacity: 1
+
+.address-list
+  width: 100%
+  margin: 0
+  padding: .625rem 0
+  top: 100%
+  position: absolute
+  background: #FFFFFF
+  border-radius: .313rem
+  box-shadow: 2px 6px 20px rgba(119, 119, 119, 0.18)
+  z-index: 99999
+
+  &__item
+    display: flex
+    align-items: center
+    padding: .313rem .875rem .313rem .875rem
+    color: #979797
+    font-size: 1rem
+    font-weight: 550
+    line-height: 1.125rem
+    list-style: none
+    cursor: pointer
+
+    &:before
+      width: 1.5rem
+      height: 1.5rem
+      flex: 1.5rem 0 0
+      margin: 0 .75rem 0 0
+      content: ''
+      display: block
+      background-size: cover
+      background-repeat: no-repeat
+      background-position: center center
+      background-image: url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjQiIGhlaWdodD0iMjQiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGNpcmNsZSBjeD0iMTIiIGN5PSIxMiIgcj0iMTIiIGZpbGw9IiNFRUUiLz48cGF0aCBkPSJNMTIgNy4zOTVjLS41MSAwLTEuMDA4LjE1LTEuNDMyLjQzLS40MjMuMjgyLS43NTMuNjgxLS45NDggMS4xNDhhMi41NCAyLjU0IDAgMDAuNTU4IDIuNzg3IDIuNTk0IDIuNTk0IDAgMDAyLjgwNy41NTRjLjQ3LS4xOTQuODczLS41MjEgMS4xNTYtLjk0MmEyLjU0MyAyLjU0MyAwIDAwLS4zMi0zLjIyNyAyLjU4OSAyLjU4OSAwIDAwLTEuODIyLS43NXptMCAzLjgzNWExLjI5NSAxLjI5NSAwIDAxLTEuMTktLjc4OSAxLjI3IDEuMjcgMCAwMS4yNzktMS4zOTMgMS4yOSAxLjI5IDAgMDExLjQwMy0uMjc3IDEuMjcyIDEuMjcyIDAgMDEuNDE4IDIuMDg1Yy0uMjQyLjIzOS0uNTcuMzc0LS45MS4zNzR6IiBmaWxsPSIjNTg1ODU4Ii8+PHBhdGggZD0iTTE2Ljk1IDUuMDM1YTcuMDI1IDcuMDI1IDAgMDAtNC41ODYtMi4wMjZBNy4wMzUgNy4wMzUgMCAwMDcuNTkgNC41NTJhNi45MzcgNi45MzcgMCAwMC0yLjUwNiA0LjMxNiA2LjkwNyA2LjkwNyAwIDAwMS4wNSA0Ljg3MkwxMSAyMS4xNTZhMS4xOSAxLjE5IDAgMDAuOTk5LjUzNyAxLjIgMS4yIDAgMDAuOTk5LS41MzdsNC44NjYtNy40MTZhNi45MDggNi45MDggMCAwMC0uOTE1LTguNzA2em0tLjE2NCA4LjAwN0wxMiAyMC4zMzVsLTQuNzg3LTcuMjkzYTUuNjY0IDUuNjY0IDAgMDEyLjYtOC4zMzMgNS43NSA1Ljc1IDAgMDE2LjIyNiAxLjIzIDUuNjY0IDUuNjY0IDAgMDEuNzQ3IDcuMTAzeiIgZmlsbD0iIzU4NTg1OCIvPjwvc3ZnPg==')
+
+    &:last-of-type
+      padding: 0 .875rem
+
+  &__item.focused
+    background: lighten(#C4C4C4, 20%)
+
+.search
+  max-width: 10.25rem
+  margin: 0 0 0 auto
+  display: flex
+  align-items: center
+  position: relative
+
+  &__icon-cont
+    width: 2.875rem
+    height: 100%
+    display: flex
+    align-items: center
+    justify-content: center
+    top: 0
+    left: 0
+    position: absolute
+
+  &__input
+    padding: .625rem 0 .625rem 2.75rem
+    color: #000000
+
+    &::placeholder
+      color: #000000
+
+.auth
+  margin: 0 0 0 1.25rem
+  display: flex
+  align-items: center
+
+  &__icon-cont
+    margin: 0 .875rem 0 0
+    display: flex
+    align-items: center
+    justify-content: center
+
+  &__txt
+    color: #000000
+    font-size: 1.125rem
+    font-weight: 550
+    text-decoration: none
+    transition: .2s
+
+  &:hover
+    .auth__txt
+      color: #9CCB3B
+
+.cart
+  margin: 0 0 0 5.875rem
+
+  &:hover
+    path
+      fill: #9CCB3B
